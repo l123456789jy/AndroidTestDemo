@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication;
+package com.example.administrator.myapplication.view;
 
 import android.annotation.TargetApi;
 import android.content.Context;
