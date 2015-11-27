@@ -13,9 +13,7 @@ import android.view.animation.BounceInterpolator;
 import android.widget.OverScroller;
 import android.widget.TextView;
 
-/**
- * Created by zhaokaiqiang on 15/2/28.
- */
+
 public class JellyTextView extends TextView {
 
     private OverScroller mScroller;
