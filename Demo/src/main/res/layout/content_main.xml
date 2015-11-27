@@ -8,9 +8,23 @@
     tools:showIn="@layout/activity_main">
 
     <com.example.administrator.myapplication.view.TranseButton
+        android:id="@+id/ty"
         android:layout_marginTop="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="yidong"
         />
+    <com.example.administrator.myapplication.view.JellyTextView
+        android:id="@+id/mJellyTextView"
+        android:layout_below="@+id/ty"
+        android:textSize="16sp"
+        android:text="测试文本"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:background="@android:color/holo_green_dark"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+    />
 </RelativeLayout>

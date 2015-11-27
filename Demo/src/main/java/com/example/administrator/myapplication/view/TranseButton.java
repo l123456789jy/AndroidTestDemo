@@ -66,6 +66,12 @@ public class TranseButton extends Button {
         view.scrollTo((int) rawX, (int) rawY);
         // view.scrollBy((int)rawX,(int)rawY);
     }
+
+    @Override
+    public void computeScroll() {
+        super.computeScroll();
+    }
+
     //动画进行位移
     private void move(View view,float rawX,float rawY){
         view.setTranslationX(rawX);
