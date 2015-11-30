@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.bt)
     Button mBt;
     Intent mIntent;
+    @Bind(R.id.bt_event)
+    Button btEvent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,13 +27,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mBt.setOnClickListener(this);
+        btEvent.setOnClickListener(this);
     }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             //打开View移动的测试界面
             case R.id.bt:
                 mIntent = new Intent(MainActivity.this, TestMoveActivity.class);
+                startActivity(mIntent);
+                break;
+            //打开View事件测试界面
+            case R.id.bt_event:
+                mIntent = new Intent(MainActivity.this, TestEventActivity.class);
                 startActivity(mIntent);
                 break;
         }

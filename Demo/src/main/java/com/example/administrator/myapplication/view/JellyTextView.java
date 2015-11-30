@@ -54,9 +54,9 @@ public class JellyTextView extends TextView {
                 Log.e("startX",getX()+"");
                 Log.e("startRX",event.getRawX()+"");
                 //int startX,开始的位置
-                // int startY,结束的位置
-                // int dx,
-                // int dy,
+                // int startY,y位置开始的位置
+                // int dx, x滑动的距离
+                // int dy, y滑动的距离
                 // int duration执行完毕需要的时间
                 mScroller.startScroll((int) getX(), (int) getY(), -(int) (getX() - startX),-(int) (getY() - startY),20000);
                 invalidate();
@@ -66,10 +66,12 @@ public class JellyTextView extends TextView {
         return super.onTouchEvent(event);
     }
 
-
+    //每次移动都会调用computeScroll
     @Override
     public void computeScroll() {
+        //判断是否滑动结束
         if (mScroller.computeScrollOffset()) {
+            Log.e("已经滑动到", mScroller.getCurrX()+"");
             setX(mScroller.getCurrX());
             setY(mScroller.getCurrY());
             invalidate();
