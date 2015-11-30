@@ -24,13 +24,15 @@ public class MyButton extends Button {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        Log.e("MyButton", "dispatchTouchEvent==="+super.dispatchTouchEvent(event));
-        return super.dispatchTouchEvent(event);
+        boolean b = super.dispatchTouchEvent(event);
+        Log.e("MyButton", "dispatchTouchEvent==="+b);
+        return b;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.e("MyButton", "onTouchEvent==="+super.onTouchEvent(event));
-        return super.onTouchEvent(event);
+        boolean b = super.onTouchEvent(event);
+        Log.e("MyButton", "onTouchEvent==="+b);
+        return b;
     }
 }

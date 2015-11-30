@@ -21,17 +21,20 @@ public class MyRealLayout extends RelativeLayout {
     }
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.e("MyRealLayout", "dispatchTouchEvent==="+super.dispatchTouchEvent(ev));
-        return super.dispatchTouchEvent(ev);
+        boolean b = super.dispatchTouchEvent(ev);
+        Log.e("MyRealLayout", "dispatchTouchEvent==="+b);
+        return b;
     }
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Log.e("MyRealLayout", "onInterceptTouchEvent==="+super.onInterceptTouchEvent(ev));
-        return super.onInterceptTouchEvent(ev);
+        boolean b = super.onInterceptTouchEvent(ev);
+        Log.e("MyRealLayout", "onInterceptTouchEvent==="+b);
+        return b;
     }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.e("MyRealLayout", "onTouchEvent==="+super.onTouchEvent(event));
-        return super.onTouchEvent(event);
+        boolean b = super.onTouchEvent(event);
+        Log.e("MyRealLayout", "onTouchEvent==="+b);
+        return b;
     }
 }
