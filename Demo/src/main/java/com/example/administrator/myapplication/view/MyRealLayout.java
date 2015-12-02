@@ -21,20 +21,72 @@ public class MyRealLayout extends RelativeLayout {
     }
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
+        int action = ev.getAction();
+        switch (action)
+        {
+            case MotionEvent.ACTION_DOWN:
+                Log.e("MyRealLayout", "dispatchTouchEvent ACTION_DOWN");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.e("MyRealLayout", "dispatchTouchEvent ACTION_MOVE");
+                break;
+            case MotionEvent.ACTION_UP:
+                Log.e("MyRealLayout", "dispatchTouchEvent ACTION_UP");
+                break;
+
+            default:
+                break;
+        }
         boolean b = super.dispatchTouchEvent(ev);
         Log.e("MyRealLayout", "dispatchTouchEvent==="+b);
         return b;
     }
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
+        int action = ev.getAction();
+        switch (action)
+        {
+            case MotionEvent.ACTION_DOWN:
+                Log.e("MyRealLayout", "onInterceptTouchEvent ACTION_DOWN");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.e("MyRealLayout", "onInterceptTouchEvent ACTION_MOVE");
+                break;
+            case MotionEvent.ACTION_UP:
+                Log.e("MyRealLayout", "onInterceptTouchEvent ACTION_UP");
+                break;
+            default:
+                break;
+        }
         boolean b = super.onInterceptTouchEvent(ev);
         Log.e("MyRealLayout", "onInterceptTouchEvent==="+b);
         return b;
     }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        int action = event.getAction();
+        switch (action)
+        {
+            case MotionEvent.ACTION_DOWN:
+                Log.e("MyRealLayout", "onTouchEvent ACTION_DOWN");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.e("MyRealLayout", "onTouchEvent ACTION_MOVE");
+                break;
+            case MotionEvent.ACTION_UP:
+                Log.e("MyRealLayout", "onTouchEvent ACTION_UP");
+                break;
+            default:
+                break;
+        }
         boolean b = super.onTouchEvent(event);
         Log.e("MyRealLayout", "onTouchEvent==="+b);
         return b;
+    }
+    @Override
+    public void requestDisallowInterceptTouchEvent(boolean disallowIntercept)
+    {
+        Log.e("MyRealLayout", "requestDisallowInterceptTouchEvent ");
+        super.requestDisallowInterceptTouchEvent(disallowIntercept);
     }
 }

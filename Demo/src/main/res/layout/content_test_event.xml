@@ -6,6 +6,7 @@
     android:background="#541515">
 
     <com.example.administrator.myapplication.view.MyButton
+        android:id="@+id/bt_event"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true" />
