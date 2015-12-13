@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btEvent;
     @Bind(R.id.bt_thread)
     Button mBtThread;
+    @Bind(R.id.bt_test_view)
+    Button btTestView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBt.setOnClickListener(this);
         btEvent.setOnClickListener(this);
         mBtThread.setOnClickListener(this);
+        btTestView.setOnClickListener(this);
         int i = Runtime.getRuntime().availableProcessors();
         Log.e("i", i + "");
     }
@@ -53,6 +56,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //测试线程池
             case R.id.bt_thread:
                 mIntent = new Intent(MainActivity.this, ThreadPollTestActivity.class);
+                startActivity(mIntent);
+                break;
+            //自定义view
+            case R.id.bt_test_view:
+                mIntent = new Intent(MainActivity.this, ViewTestActivity.class);
                 startActivity(mIntent);
                 break;
         }
