@@ -55,9 +55,7 @@ public class ThreadPollTestActivity extends AppCompatActivity implements View.On
         mBtContorOneThread.setOnClickListener(this);
 
         new ThreadPoolExecutor(3,3,0l,TimeUnit.MINUTES,new PriorityBlockingQueue());
-        Handler Handler=new Handler();
-        Message mMessage=new Message();
-        Looper.prepare();
+
     }
 
     @Override
