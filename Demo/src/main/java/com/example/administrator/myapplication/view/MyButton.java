@@ -63,7 +63,12 @@ public class MyButton extends Button {
                 break;
         }
         boolean b = super.onTouchEvent(event);
-        Log.e("MyButton", "onTouchEvent==="+b);
+        Log.e("MyButton", "onTouchEvent===" + b);
         return b;
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 }

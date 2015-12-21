@@ -38,7 +38,7 @@ public class MyRealLayout extends RelativeLayout {
                 break;
         }
         boolean b = super.dispatchTouchEvent(ev);
-        Log.e("MyRealLayout", "dispatchTouchEvent==="+b);
+        Log.e("MyRealLayout", "dispatchTouchEvent===" + b);
         return b;
     }
     @Override
@@ -88,5 +88,15 @@ public class MyRealLayout extends RelativeLayout {
     {
         Log.e("MyRealLayout", "requestDisallowInterceptTouchEvent ");
         super.requestDisallowInterceptTouchEvent(disallowIntercept);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        final int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        final int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+        final int widthSize = MeasureSpec.getSize(widthMeasureSpec);
+        final int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+
     }
 }
