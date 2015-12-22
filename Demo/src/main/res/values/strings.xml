@@ -5,4 +5,21 @@
     <string name="title_activity_test_event">TestEventActivity</string>
     <string name="title_activity_thread_poll_test">ThreadPollTestActivity</string>
     <string name="title_activity_view_test">ViewTestActivity</string>
+    <string name="title_activity_refresh">RefreshActivity</string>
+    <!-- 下拉刷新、分布加载 -->
+    <string name="g_image_desc"></string>
+    <string name="g_label_update">更新于: </string>
+    <string name="g_label_last_time">1分钟前</string>
+    <string name="g_pull_down_for_refresh">下拉刷新</string>
+    <string name="g_release_for_refresh">松开刷新</string>
+    <string name="g_refreshing">正在刷新&#8230;</string>
+    <string name="g_pull_up_for_more">上拉加载更多</string>
+    <string name="g_release_for_more">松开加载更多</string>
+    <string name="g_loading">正在加载&#8230;</string>
+    <string name="g_not_updated_yet">暂未更新过</string>
+    <string name="g_updated_at">上次更新于 %1$s 前</string>
+    <string name="g_updated_just_now">刚刚更新</string>
+    <string name="g_time_error">时间有问题</string>
+    <string name="g_tip_menu_no">无可操作的菜单。</string>
+    <string name="g_nodata">暂无记录</string>
 </resources>

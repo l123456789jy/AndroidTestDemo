@@ -5,7 +5,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -24,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button mBtThread;
     @Bind(R.id.bt_test_view)
     Button btTestView;
+    @Bind(R.id.bt_refresh)
+    Button mBtRefresh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btEvent.setOnClickListener(this);
         mBtThread.setOnClickListener(this);
         btTestView.setOnClickListener(this);
-        int i = Runtime.getRuntime().availableProcessors();
-        Log.e("i", i + "");
+        mBtRefresh.setOnClickListener(this);
+
     }
 
     @Override
@@ -61,6 +62,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //自定义view
             case R.id.bt_test_view:
                 mIntent = new Intent(MainActivity.this, ViewTestActivity.class);
+                startActivity(mIntent);
+                break;
+            //刷新的listview
+            case R.id.bt_refresh:
+                mIntent = new Intent(MainActivity.this, RefreshActivity.class);
                 startActivity(mIntent);
                 break;
         }

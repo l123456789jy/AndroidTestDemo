@@ -58,7 +58,7 @@ public class JellyTextView extends TextView {
                 // int dx, x滑动的距离
                 // int dy, y滑动的距离
                 // int duration执行完毕需要的时间
-                mScroller.startScroll((int) getX(), (int) getY(), -(int) (getX() - startX),-(int) (getY() - startY),20000);
+                mScroller.startScroll((int) getX(), (int) getY(), -(int) (getX() - startX),-(int) (getY() - startY),200);
                 invalidate();
                 break;
         }

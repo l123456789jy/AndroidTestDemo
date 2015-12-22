@@ -38,5 +38,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="自定义view" />
+        <Button
+            android:id="@+id/bt_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义下拉刷新上拉加载listview" />
     </LinearLayout>
 </RelativeLayout>

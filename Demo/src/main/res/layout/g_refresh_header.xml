@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom" >
+
+    <RelativeLayout
+        android:id="@+id/header_content"
+        android:layout_width="match_parent"
+        android:layout_height="60dip" >
+
+        <LinearLayout
+            android:id="@+id/layoutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/refresh_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/g_pull_down_for_refresh"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/refresh_last_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:text="@string/g_not_updated_yet"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="30dip"
+            android:layout_toLeftOf="@id/layoutTitle"
+            android:contentDescription="@string/g_image_desc"
+            android:src="@mipmap/g_refresh_down" />
+
+        <ProgressBar
+            android:id="@+id/pbWaiting"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="30dip"
+            android:layout_toLeftOf="@id/layoutTitle"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>
