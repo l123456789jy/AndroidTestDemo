@@ -10,9 +10,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.OverScroller;
-import android.widget.RelativeLayout;
 
-import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.listenenr.XrefershListviewListener;
 
 /**
@@ -65,7 +63,6 @@ public class XrefershListview extends ListView implements AbsListView.OnScrollLi
         mHeaderView.setHeaderHeight(200);
         //初始化footview
         initFooterView(context);
-        final RelativeLayout header_content = (RelativeLayout) mHeaderView.findViewById(R.id.header_content);
         addHeaderView(mHeaderView);
         this.setOnScrollListener(this);
         //监听到view加载完毕获取view的高度

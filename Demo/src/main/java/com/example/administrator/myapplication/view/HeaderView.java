@@ -61,7 +61,7 @@ public class HeaderView extends LinearLayout {
 		mProgressBar = (ProgressBar) mHeader.findViewById(R.id.pbWaiting);
 		mRefreshTips = (TextView) mHeader.findViewById(R.id.refresh_tips);
 		mRefreshLastTime = (TextView) mHeader.findViewById(R.id.refresh_last_time);
-
+		//初始化旋转的动画需要反转箭头
 		mRotateUp = new RotateAnimation(0.0f, -180.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 		mRotateUp.setDuration(ROTATE_DURATION);
 		mRotateUp.setFillAfter(true);
