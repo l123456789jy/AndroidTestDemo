@@ -18,7 +18,8 @@ public class RefreshActivity extends AppCompatActivity implements XrefershListvi
     Toolbar mToolbar;
     @Bind(R.id.XrefershListview)
     XrefershListview mXrefershListview;
-
+    ArrayAdapter<String> adapter;
+    int postion=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +27,10 @@ public class RefreshActivity extends AppCompatActivity implements XrefershListvi
         ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1);
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1);
         for (int i = 0; i < 10; i++) {
-            adapter.add("string1"+i);
+            postion++;
+            adapter.add("string1"+postion);
         }
         mXrefershListview.setAdapter(adapter);
         mXrefershListview.setXrefershListviewListener(this);
@@ -37,10 +39,21 @@ public class RefreshActivity extends AppCompatActivity implements XrefershListvi
     @Override
     public void onRefresh() {
         Toast.makeText(RefreshActivity.this,"刷新啦！！",Toast.LENGTH_LONG).show();
+        adapter.clear();
+        postion=0;
+        for (int i = 0; i < 10; i++) {
+            postion++;
+            adapter.add("string1"+postion);
+        }
+        mXrefershListview.setAdapter(adapter);
     }
 
     @Override
     public void onLoadMore() {
-
+        for (int i = 0; i < 5; i++) {
+            postion++;
+            adapter.add("string1"+postion);
+        }
+        adapter.notifyDataSetChanged();
     }
 }
