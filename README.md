@@ -7,4 +7,4 @@
 - 触摸事件的探索
 - 线城池
 - 自定义listview实现下拉刷新了上拉加载
-- ViewDragHelper的使用
+- ViewDragHelper自定义卡片

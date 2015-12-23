@@ -94,8 +94,11 @@ public class ViewDragLayout  extends RelativeLayout {
                 Log.e(TAG,"xvel="+releasedChild.getRight());
                 Log.e(TAG,"xvel="+releasedChild.getTop());
                 Log.e(TAG,"xvel="+releasedChild.getBottom());
-               /* //mAutoBackView手指释放时可以自动回去
-                if (releasedChild == mAutoBackView) {
+
+                mviewDragHelper.smoothSlideViewTo(releasedChild, -600, -600);
+                invalidate();
+                //mAutoBackView手指释放时可以自动回去
+             /*   if (releasedChild == mAutoBackView) {
                     //内部还是调用scroview的移动的方法
                     mviewDragHelper.settleCapturedViewAt(mAutoBackOriginPos.x, mAutoBackOriginPos.y);
                     invalidate();
