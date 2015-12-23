@@ -17,10 +17,13 @@ import android.widget.RelativeLayout;
 public class ViewDragLayout  extends RelativeLayout {
     public final String TAG="ViewDragLayout";
     ViewDragHelper mviewDragHelper;
-    private View mDragView;
-    private View mAutoBackView;
     private View mEdgeTrackerView;
     int childCount;
+    //定义移动的边界值
+    int BORDER_LEFT=-351;
+    int BORDER_RIGHT=1068;
+    int BORDER_TOP=-296;
+    int BORDER_BOTTOM=1490;
     private static final float SCALE_STEP = 0.05f; // view叠加缩放的步长
     private int yOffsetStep = 40; // view叠加垂直偏移量的步长
     //创建一个点
@@ -90,19 +93,20 @@ public class ViewDragLayout  extends RelativeLayout {
             //在手势拖动释放的时候被调用，可以在这里设置子View预期到达的位置
             @Override
             public void onViewReleased(View releasedChild, float xvel, float yvel) {
-                Log.e(TAG,"xvel="+releasedChild.getLeft());
-                Log.e(TAG,"xvel="+releasedChild.getRight());
-                Log.e(TAG,"xvel="+releasedChild.getTop());
-                Log.e(TAG,"xvel="+releasedChild.getBottom());
-
-                mviewDragHelper.smoothSlideViewTo(releasedChild, -600, -600);
-                invalidate();
-                //mAutoBackView手指释放时可以自动回去
-             /*   if (releasedChild == mAutoBackView) {
+                Log.e(TAG,"Left="+releasedChild.getLeft());
+                Log.e(TAG,"Right="+releasedChild.getRight());
+                Log.e(TAG,"Top="+releasedChild.getTop());
+                Log.e(TAG,"Bottom="+releasedChild.getBottom());
+                if (releasedChild.getLeft()<=BORDER_LEFT||releasedChild.getRight()>=BORDER_RIGHT||releasedChild.getTop()<=BORDER_TOP||releasedChild.getBottom()>=BORDER_BOTTOM){
                     //内部还是调用scroview的移动的方法
-                    mviewDragHelper.settleCapturedViewAt(mAutoBackOriginPos.x, mAutoBackOriginPos.y);
+                    mviewDragHelper.smoothSlideViewTo(releasedChild, -600, -600);
                     invalidate();
-                }*/
+                }else{
+                    //代表用户不想移动出去，那就移动View的位置到原始的位置
+                        //内部还是调用scroview的移动的方法
+                        mviewDragHelper.settleCapturedViewAt(mAutoBackOriginPos.x, mAutoBackOriginPos.y);
+                        invalidate();
+                }
             }
             // 这个用来控制拖拽过程中松手后，自动滑行的速度
             @Override
@@ -130,39 +134,24 @@ public class ViewDragLayout  extends RelativeLayout {
                             int bottom) {
         super.onLayout(changed,left,  top, right, bottom);
         Log.e(TAG,"onLayout");
-        mAutoBackOriginPos.x = mAutoBackView.getLeft();
-        mAutoBackOriginPos.y = mAutoBackView.getTop();
+
         //实现卡片的叠加效果
         for (int i = 0; i < childCount; i++) {
             int offset = yOffsetStep * i;
             float scale = 1 - SCALE_STEP * i;
-            if (i==0){
-                mDragView = getChildAt(0);
-                setScan(mDragView,offset, scale);
-            }if (i==1){
-                mAutoBackView = getChildAt(1);
-                setScan(mAutoBackView,offset, scale);
-            }if (i==2){
-                mEdgeTrackerView = getChildAt(2);
-                setScan(mEdgeTrackerView,offset, scale);
-            }
+            mEdgeTrackerView = getChildAt(i );
+            //获取view的原始的位置
+            mAutoBackOriginPos.x = mEdgeTrackerView.getLeft();
+            mAutoBackOriginPos.y = mEdgeTrackerView.getTop();
+            setScan(mEdgeTrackerView,offset, scale);
           //  Log.e(TAG,"onFinishInflate=="+offset);
         }
     }
-    //在加载完布局后会调用
+    //在加载完布局后会调用，赋值想多的
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
         childCount = getChildCount();
-        for (int i = 0; i < childCount; i++) {
-            if (i==0){
-                mDragView = getChildAt(0);
-            }if (i==1){
-                mAutoBackView = getChildAt(1);
-            }if (i==2){
-                mEdgeTrackerView = getChildAt(2);
-            }
-        }
         Log.e(TAG,"onFinishInflate=="+getChildCount());
     }
 
