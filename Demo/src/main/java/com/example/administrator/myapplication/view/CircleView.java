@@ -83,7 +83,6 @@ public class CircleView extends View {
         } else if (heightMeasureSpecMode == MeasureSpec.AT_MOST) {
             setMeasuredDimension(widthMeasureSpecSize, 200);
         }
-        Log.e("==============================================","=================================");
     }
 
     @Override

@@ -10,11 +10,13 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
-
+<ScrollView
+    android:layout_below="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
         android:orientation="vertical">
 
         <Button
@@ -43,5 +45,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="自定义下拉刷新上拉加载listview" />
+        <Button
+            android:id="@+id/bt_viewdrag_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ViewDragHelper" />
     </LinearLayout>
+</ScrollView>
 </RelativeLayout>

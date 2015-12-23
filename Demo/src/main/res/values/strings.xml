@@ -8,7 +8,7 @@
     <string name="title_activity_refresh">RefreshActivity</string>
     <!-- 下拉刷新、分布加载 -->
     <string name="g_image_desc"></string>
-    <string name="g_label_update">更新于: </string>
+    <string name="g_label_update">更新于:</string>
     <string name="g_label_last_time">1分钟前</string>
     <string name="g_pull_down_for_refresh">下拉刷新</string>
     <string name="g_release_for_refresh">松开刷新</string>
@@ -22,4 +22,5 @@
     <string name="g_time_error">时间有问题</string>
     <string name="g_tip_menu_no">无可操作的菜单。</string>
     <string name="g_nodata">暂无记录</string>
+    <string name="title_activity_view_drag_helper">ViewDragHelperActivity</string>
 </resources>

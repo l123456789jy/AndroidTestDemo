@@ -38,6 +38,11 @@
             android:label="@string/title_activity_refresh"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".ViewDragHelperActivity"
+            android:label="@string/title_activity_view_drag_helper"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

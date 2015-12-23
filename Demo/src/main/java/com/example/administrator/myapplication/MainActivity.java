@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btTestView;
     @Bind(R.id.bt_refresh)
     Button mBtRefresh;
+    @Bind(R.id.bt_viewdrag_help)
+    Button mBtViewdragHelp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtThread.setOnClickListener(this);
         btTestView.setOnClickListener(this);
         mBtRefresh.setOnClickListener(this);
+        mBtViewdragHelp.setOnClickListener(this);
 
     }
 
@@ -67,6 +70,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //刷新的listview
             case R.id.bt_refresh:
                 mIntent = new Intent(MainActivity.this, RefreshActivity.class);
+                startActivity(mIntent);
+                break;
+            //ViewDragHelper使用
+            case R.id.bt_viewdrag_help:
+                mIntent = new Intent(MainActivity.this, ViewDragHelperActivity.class);
                 startActivity(mIntent);
                 break;
         }
