@@ -16,7 +16,7 @@
 
     <include
         layout="@layout/content_thread_poll_test"/>
-
+z
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
