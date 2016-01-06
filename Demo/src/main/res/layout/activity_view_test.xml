@@ -16,4 +16,20 @@
         android:id="@+id/CustomDrawable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <com.example.administrator.myapplication.view.ProgressView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        app:currentProgress="40"
+        app:maxProgress="100"
+        app:progressColor="#ccedf7e9"
+        app:radius="80dp"
+        app:strokeWidth="30dp"
+        app:text="40%"
+        app:textColor="#ffffff"
+        app:textSize="40dp"
+        app:innerColor="#89cc73"
+        app:outerColor="#9ad386" />
 </LinearLayout>

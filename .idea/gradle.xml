@@ -11,12 +11,14 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Demo" />
+            <option value="$PROJECT_DIR$/liujingyuanlib" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Demo" />
+            <option value="$PROJECT_DIR$/liujingyuanlib" />
           </set>
         </option>
       </GradleProjectSettings>

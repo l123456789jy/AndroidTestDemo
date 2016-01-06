@@ -16,6 +16,7 @@ public class ViewTestActivity extends Activity {
         CustomDrawable mCustomDrawable=new CustomDrawable();
         mImageView.setImageDrawable(mCustomDrawable);
 
+
         //建造者模式
         NutritionFacts.Builder builder = new NutritionFacts.Builder(20, 0);
         builder.fat(50).Builder();

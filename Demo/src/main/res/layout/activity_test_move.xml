@@ -50,6 +50,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ViewDragHelper" />
+        <Button
+            android:id="@+id/bt_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="动画" />
     </LinearLayout>
 </ScrollView>
 </RelativeLayout>

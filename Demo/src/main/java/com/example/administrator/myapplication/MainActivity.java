@@ -10,25 +10,20 @@ import android.widget.Button;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
-    @Bind(R.id.bt)
-    Button mBt;
+public class MainActivity extends AppCompatActivity
+        implements View.OnClickListener {
+    @Bind(R.id.toolbar) Toolbar mToolbar;
+    @Bind(R.id.bt) Button mBt;
     Intent mIntent;
-    @Bind(R.id.bt_event)
-    Button btEvent;
-    @Bind(R.id.bt_thread)
-    Button mBtThread;
-    @Bind(R.id.bt_test_view)
-    Button btTestView;
-    @Bind(R.id.bt_refresh)
-    Button mBtRefresh;
-    @Bind(R.id.bt_viewdrag_help)
-    Button mBtViewdragHelp;
+    @Bind(R.id.bt_event) Button btEvent;
+    @Bind(R.id.bt_thread) Button mBtThread;
+    @Bind(R.id.bt_test_view) Button btTestView;
+    @Bind(R.id.bt_refresh) Button mBtRefresh;
+    @Bind(R.id.bt_viewdrag_help) Button mBtViewdragHelp;
+    @Bind(R.id.bt_animation) Button mBtAnimation;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_move);
         ButterKnife.bind(this);
@@ -40,11 +35,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTestView.setOnClickListener(this);
         mBtRefresh.setOnClickListener(this);
         mBtViewdragHelp.setOnClickListener(this);
-
+        mBtAnimation.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
+
+    @Override public void onClick(View v) {
         switch (v.getId()) {
             //打开View移动的测试界面
             case R.id.bt:
@@ -53,12 +48,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             //打开View事件测试界面
             case R.id.bt_event:
-                mIntent = new Intent(MainActivity.this, TestEventActivity.class);
+                mIntent = new Intent(MainActivity.this,
+                        TestEventActivity.class);
                 startActivity(mIntent);
                 break;
             //测试线程池
             case R.id.bt_thread:
-                mIntent = new Intent(MainActivity.this, ThreadPollTestActivity.class);
+                mIntent = new Intent(MainActivity.this,
+                        ThreadPollTestActivity.class);
                 startActivity(mIntent);
                 break;
             //自定义view
@@ -73,25 +70,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             //ViewDragHelper使用
             case R.id.bt_viewdrag_help:
-                mIntent = new Intent(MainActivity.this, ViewDragHelperActivity.class);
+                mIntent = new Intent(MainActivity.this,
+                        ViewDragHelperActivity.class);
+                startActivity(mIntent);
+                break;
+            //动画的使用
+            case R.id.bt_animation:
+                mIntent = new Intent(MainActivity.this,
+                        AnimationActivity.class);
                 startActivity(mIntent);
                 break;
         }
     }
 
+
     public class MyAsyTask extends AsyncTask<Void, Integer, Boolean> {
-        @Override
-        protected void onPreExecute() {
+        @Override protected void onPreExecute() {
             super.onPreExecute();
         }
 
-        @Override
-        protected Boolean doInBackground(Void... params) {
+
+        @Override protected Boolean doInBackground(Void... params) {
             return null;
         }
 
-        @Override
-        protected void onPostExecute(Boolean aBoolean) {
+
+        @Override protected void onPostExecute(Boolean aBoolean) {
             super.onPostExecute(aBoolean);
         }
     }

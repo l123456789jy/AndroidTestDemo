@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-     <declare-styleable name="CircleView">
-         <attr name="circle_color" format="color"/>
-     </declare-styleable>
+    <declare-styleable name="CircleView">
+        <attr name="circle_color"
+            format="color"/>
+    </declare-styleable>
 
+    <declare-styleable name="ProgressView">
+        <attr name="text"
+            format="string"/>
+        <attr name="textColor"
+            format="color"/>
+        <attr name="textSize"
+            format="dimension"/>
+        <attr name="radius"
+            format="dimension"/>
+        <attr name="strokeWidth"
+            format="dimension"/>
+        <attr name="innerColor"
+            format="color"/>
+        <attr name="outerColor"
+            format="color"/>
+        <attr name="progressColor"
+            format="color"/>
+        <attr name="maxProgress"
+            format="integer"/>
+        <attr name="currentProgress"
+            format="integer"/>
+    </declare-styleable>
 </resources>
