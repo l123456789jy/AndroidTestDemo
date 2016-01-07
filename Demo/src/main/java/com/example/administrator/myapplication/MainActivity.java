@@ -1,7 +1,6 @@
 package com.example.administrator.myapplication;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -21,6 +20,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_refresh) Button mBtRefresh;
     @Bind(R.id.bt_viewdrag_help) Button mBtViewdragHelp;
     @Bind(R.id.bt_animation) Button mBtAnimation;
+    @Bind(R.id.bt_handel) Button mBtHandel;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity
         mBtRefresh.setOnClickListener(this);
         mBtViewdragHelp.setOnClickListener(this);
         mBtAnimation.setOnClickListener(this);
+        mBtHandel.setOnClickListener(this);
     }
 
 
@@ -80,23 +81,12 @@ public class MainActivity extends AppCompatActivity
                         AnimationActivity.class);
                 startActivity(mIntent);
                 break;
-        }
-    }
-
-
-    public class MyAsyTask extends AsyncTask<Void, Integer, Boolean> {
-        @Override protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-
-        @Override protected Boolean doInBackground(Void... params) {
-            return null;
-        }
-
-
-        @Override protected void onPostExecute(Boolean aBoolean) {
-            super.onPostExecute(aBoolean);
+            //handelthread
+            case R.id.bt_handel:
+                mIntent = new Intent(MainActivity.this,
+                        HandelThreadActivity.class);
+                startActivity(mIntent);
+                break;
         }
     }
 }

@@ -24,4 +24,5 @@
     <string name="g_nodata">暂无记录</string>
     <string name="title_activity_view_drag_helper">ViewDragHelperActivity</string>
     <string name="title_activity_animation">AnimationActivity</string>
+    <string name="title_activity_handel_thread">HandelThreadActivity</string>
 </resources>

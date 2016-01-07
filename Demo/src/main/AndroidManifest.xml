@@ -36,14 +36,18 @@
         <activity
             android:name=".RefreshActivity"
             android:label="@string/title_activity_refresh"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ViewDragHelperActivity"
             android:label="@string/title_activity_view_drag_helper"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".AnimationActivity"
             android:label="@string/title_activity_animation"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".HandelThreadActivity"
+            android:label="@string/title_activity_handel_thread"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

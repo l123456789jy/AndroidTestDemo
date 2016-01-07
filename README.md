@@ -10,3 +10,4 @@
 - ViewDragHelper自定义卡片
 - 自定义drawable
 - 动画
+- HandlerThread
