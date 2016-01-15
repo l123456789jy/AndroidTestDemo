@@ -85,6 +85,12 @@ public class CircleView extends View {
         }
     }
 
+
+    @Override protected void drawableStateChanged() {
+        super.drawableStateChanged();
+    }
+
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);

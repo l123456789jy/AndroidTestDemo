@@ -11,3 +11,5 @@
 - 自定义drawable
 - 动画
 - HandlerThread
+- 观察者模式
+- GestureDetector手势类使用

@@ -9,57 +9,77 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
-<ScrollView
-    android:layout_below="@+id/toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
+        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/bt"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="view的移动" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/bt_event"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="view事件传递" />
-        <Button
-            android:id="@+id/bt_thread"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="线程池" />
-        <Button
-            android:id="@+id/bt_test_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="自定义view" />
-        <Button
-            android:id="@+id/bt_refresh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="自定义下拉刷新上拉加载listview" />
-        <Button
-            android:id="@+id/bt_viewdrag_help"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ViewDragHelper" />
-        <Button
-            android:id="@+id/bt_animation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="动画" />
-        <Button
-            android:id="@+id/bt_handel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="HandelThread" />
-    </LinearLayout>
-</ScrollView>
+            <Button
+                android:id="@+id/bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="view的移动"/>
+
+            <Button
+                android:id="@+id/bt_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="view事件传递"/>
+
+            <Button
+                android:id="@+id/bt_thread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="线程池"/>
+
+            <Button
+                android:id="@+id/bt_test_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义view"/>
+
+            <Button
+                android:id="@+id/bt_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义下拉刷新上拉加载listview"/>
+
+            <Button
+                android:id="@+id/bt_viewdrag_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ViewDragHelper"/>
+
+            <Button
+                android:id="@+id/bt_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动画"/>
+
+            <Button
+                android:id="@+id/bt_handel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HandelThread"/>
+
+            <Button
+                android:id="@+id/bt_obse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="观察者模式"/>
+
+            <Button
+                android:id="@+id/bt_gesture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GestureDetector"/>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

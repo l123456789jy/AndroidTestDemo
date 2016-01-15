@@ -48,6 +48,14 @@
         <activity
             android:name=".HandelThreadActivity"
             android:label="@string/title_activity_handel_thread"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ObseverActivity"
+            android:label="@string/title_activity_obsever"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".GestureDetectorActivity"
+            android:label="@string/title_activity_gesture_detector"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

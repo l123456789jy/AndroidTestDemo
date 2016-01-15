@@ -25,4 +25,7 @@
     <string name="title_activity_view_drag_helper">ViewDragHelperActivity</string>
     <string name="title_activity_animation">AnimationActivity</string>
     <string name="title_activity_handel_thread">HandelThreadActivity</string>
+    <string name="title_activity_obsever">ObseverActivity</string>
+    <string name="title_activity_gesture_detector">GestureDetectorActivity
+    </string>
 </resources>

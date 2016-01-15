@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_viewdrag_help) Button mBtViewdragHelp;
     @Bind(R.id.bt_animation) Button mBtAnimation;
     @Bind(R.id.bt_handel) Button mBtHandel;
+    @Bind(R.id.bt_obse) Button mBtObse;
+    @Bind(R.id.bt_gesture) Button mBtGesture;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity
         mBtViewdragHelp.setOnClickListener(this);
         mBtAnimation.setOnClickListener(this);
         mBtHandel.setOnClickListener(this);
+        mBtObse.setOnClickListener(this);
+        mBtGesture.setOnClickListener(this);
     }
 
 
@@ -85,6 +89,16 @@ public class MainActivity extends AppCompatActivity
             case R.id.bt_handel:
                 mIntent = new Intent(MainActivity.this,
                         HandelThreadActivity.class);
+                startActivity(mIntent);
+                break;
+            //观察者模式
+            case R.id.bt_obse:
+                mIntent = new Intent(MainActivity.this, ObseverActivity.class);
+                startActivity(mIntent);
+                break;
+            //GestureDetector手势类探索
+            case R.id.bt_gesture:
+                mIntent = new Intent(MainActivity.this, GestureDetectorActivity.class);
                 startActivity(mIntent);
                 break;
         }
