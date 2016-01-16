@@ -80,6 +80,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="GestureDetector"/>
+            <Button
+                android:id="@+id/wv_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="webview与js远程交互"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

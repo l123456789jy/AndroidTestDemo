@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_handel) Button mBtHandel;
     @Bind(R.id.bt_obse) Button mBtObse;
     @Bind(R.id.bt_gesture) Button mBtGesture;
+    @Bind(R.id.wv_test) Button mWvTest;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity
         mBtHandel.setOnClickListener(this);
         mBtObse.setOnClickListener(this);
         mBtGesture.setOnClickListener(this);
+        mWvTest.setOnClickListener(this);
     }
 
 
@@ -98,7 +100,14 @@ public class MainActivity extends AppCompatActivity
                 break;
             //GestureDetector手势类探索
             case R.id.bt_gesture:
-                mIntent = new Intent(MainActivity.this, GestureDetectorActivity.class);
+                mIntent = new Intent(MainActivity.this,
+                        GestureDetectorActivity.class);
+                startActivity(mIntent);
+                break;
+            //webview
+            case R.id.wv_test:
+                mIntent = new Intent(MainActivity.this,
+                        WebviewActivity.class);
                 startActivity(mIntent);
                 break;
         }
