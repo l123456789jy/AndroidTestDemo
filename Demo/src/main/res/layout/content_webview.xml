@@ -15,5 +15,12 @@
     <WebView
         android:id="@+id/wv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></WebView>
+        android:layout_height="wrap_content"></WebView>
+
+    <Button
+        android:text="调用htm页面并且传值"
+        android:layout_below="@+id/wv"
+        android:id="@+id/bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
