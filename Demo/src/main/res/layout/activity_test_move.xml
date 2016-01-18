@@ -82,6 +82,12 @@
                 android:text="GestureDetector"/>
 
             <Button
+                android:id="@+id/bt_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="webview与js交互"/>
+
+            <Button
                 android:id="@+id/bt_view_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

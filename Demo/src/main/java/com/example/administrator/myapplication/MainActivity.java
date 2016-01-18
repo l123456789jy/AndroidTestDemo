@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_handel) Button mBtHandel;
     @Bind(R.id.bt_obse) Button mBtObse;
     @Bind(R.id.bt_gesture) Button mBtGesture;
+    @Bind(R.id.bt_tv) Button mBtTv;
+    @Bind(R.id.bt_view_group) Button mBtViewGroup;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         mBtHandel.setOnClickListener(this);
         mBtObse.setOnClickListener(this);
         mBtGesture.setOnClickListener(this);
-        mWvTest.setOnClickListener(this);
+        mBtTv.setOnClickListener(this);
         mBtViewGroup.setOnClickListener(this);
     }
 
@@ -105,11 +107,8 @@ public class MainActivity extends AppCompatActivity
                 startActivity(mIntent);
                 break;
             //webview
-            case R.id.wv_test:
-                mIntent = new Intent(MainActivity.this,
-                        WebviewActivity.class);
-                mIntent = new Intent(MainActivity.this,
-                        GestureDetectorActivity.class);
+            case R.id.bt_tv:
+                mIntent = new Intent(MainActivity.this, WebviewActivity.class);
                 startActivity(mIntent);
                 break;
             //自定义viewgroup

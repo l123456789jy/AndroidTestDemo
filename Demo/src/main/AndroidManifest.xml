@@ -61,6 +61,7 @@
             android:name=".ViewGroupActivity"
             android:label="@string/title_activity_view_group"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".WebviewActivity"/>
     </application>
 
     <uses-permission android:name="android.permission.CAMERACALL_PHONE"/>
