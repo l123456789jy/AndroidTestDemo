@@ -14,3 +14,4 @@
 - 观察者模式
 - GestureDetector手势类使用
 - webview与js的远程调用
+- 自定义viewgroup
