@@ -31,5 +31,7 @@
         app:textColor="#ffffff"
         app:textSize="40dp"
         app:innerColor="#89cc73"
-        app:outerColor="#9ad386" />
+        app:outerColor="#9ad386"/>
+
+
 </LinearLayout>
