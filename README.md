@@ -13,3 +13,4 @@
 - HandlerThread
 - 观察者模式
 - GestureDetector手势类使用
+- webview与js的远程调用

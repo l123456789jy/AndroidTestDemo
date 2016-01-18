@@ -29,4 +29,5 @@
     <string name="title_activity_gesture_detector">GestureDetectorActivity
     </string>
     <string name="title_activity_view_group">ViewGroupActivity</string>
+    <string name="title_activity_webview">WebviewActivity</string>
 </resources>
