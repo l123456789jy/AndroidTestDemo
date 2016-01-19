@@ -78,14 +78,17 @@ public class SmartRealLayout extends ViewGroup {
             View childView = getChildAt(i);
             cWidth = childView.getMeasuredWidth();
             cHeight = childView.getMeasuredHeight();
+            //获取也就是支持margin的设置
             cParams = (MarginLayoutParams) childView.getLayoutParams();
             //这里获取的是像素都是px所以是界面设置的宽度的2倍
             Log.e(TAG, "cWidth:=="+cWidth);
             Log.e(TAG, "cHeight:=="+cHeight);
-            // 上面两个childView
+            // 上面两个childView  cParams.leftMargin得到界面设置的距离左边的值，
             if (i == 0 || i == 1) {
                 tWidth += cWidth + cParams.leftMargin + cParams.rightMargin;
                 Log.e(TAG, "tWidth:=="+tWidth);
+                Log.e(TAG, "cParams.leftMargin:=="+cParams.leftMargin);
+                Log.e(TAG, "cParams.rightMargin:=="+cParams.rightMargin);
             }
 
             if (i == 2 || i == 3) {
@@ -96,6 +99,8 @@ public class SmartRealLayout extends ViewGroup {
             if (i == 0 || i == 2) {
                 lHeight += cHeight + cParams.topMargin + cParams.bottomMargin;
                 Log.e(TAG, "lHeight:=="+lHeight);
+                Log.e(TAG, "cParams.topMargin:=="+cParams.topMargin);
+                Log.e(TAG, "cParams.bottomMargin:=="+cParams.bottomMargin);
             }
 
             if (i == 1 || i == 3) {
@@ -118,9 +123,10 @@ public class SmartRealLayout extends ViewGroup {
 
 
     // abstract method in viewgroup  onLayout对其所有childView进行定位（设置childView的绘制区域）
+    //相对于父控件left、top，right、bottom的位置
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        Log.e(TAG, "onLayout: ");
+
         int cCount = getChildCount();
         int cWidth = 0;
         int cHeight = 0;
@@ -130,6 +136,7 @@ public class SmartRealLayout extends ViewGroup {
          */
         for (int i = 0; i < cCount; i++) {
             View childView = getChildAt(i);
+            //得到子view的测量宽和高
             cWidth = childView.getMeasuredWidth();
             cHeight = childView.getMeasuredHeight();
             cParams = (MarginLayoutParams) childView.getLayoutParams();
@@ -138,14 +145,16 @@ public class SmartRealLayout extends ViewGroup {
 
             switch (i) {
                 case 0:
+                    //算出第一个view的位置
                     cl = cParams.leftMargin;
                     ct = cParams.topMargin;
                     break;
                 case 1:
+                    //第二个位置在右上角，这个计算就是屏幕的宽度简易自己的宽度，和左边的宽度的到自己距离左边的位置
                     cl = getWidth() - cWidth - cParams.leftMargin -
                             cParams.rightMargin;
                     ct = cParams.topMargin;
-
+                    Log.e(TAG, "cl: "+cl);
                     break;
                 case 2:
                     cl = cParams.leftMargin;
@@ -159,6 +168,7 @@ public class SmartRealLayout extends ViewGroup {
             }
             cr = cl + cWidth;
             cb = cHeight + ct;
+            //调用每个子view来指定他们的位置
             childView.layout(cl, ct, cr, cb);
         }
     }
