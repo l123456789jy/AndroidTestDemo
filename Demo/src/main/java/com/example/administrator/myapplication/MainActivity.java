@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_gesture) Button mBtGesture;
     @Bind(R.id.bt_tv) Button mBtTv;
     @Bind(R.id.bt_view_group) Button mBtViewGroup;
+    @Bind(R.id.bt_view_float) Button mBtViewFloat;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity
         mBtGesture.setOnClickListener(this);
         mBtTv.setOnClickListener(this);
         mBtViewGroup.setOnClickListener(this);
+        mBtViewFloat.setOnClickListener(this);
     }
 
 
@@ -117,6 +119,14 @@ public class MainActivity extends AppCompatActivity
                         ViewGroupActivity.class);
                 startActivity(mIntent);
                 break;
+            //自定义流式布局
+            case R.id.bt_view_float:
+                mIntent = new Intent(MainActivity.this,
+                        FlowActivity.class);
+                startActivity(mIntent);
+                break;
+
+
         }
     }
 }

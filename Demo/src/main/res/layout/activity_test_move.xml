@@ -92,6 +92,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="自定义viewgroup"/>
+            <Button
+                android:id="@+id/bt_view_float"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义流式布局"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

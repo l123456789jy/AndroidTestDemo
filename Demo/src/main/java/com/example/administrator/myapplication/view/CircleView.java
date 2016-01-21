@@ -15,6 +15,7 @@ import com.example.administrator.myapplication.R;
  * Created by Administrator on 2015/12/13.
  */
 public class CircleView extends View {
+    private String TAG="CircleView";
     private int mColor = Color.RED;
     //创建一个画笔，实心的
     Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -85,7 +86,14 @@ public class CircleView extends View {
         }
     }
 
-
+    //组件大小改变时回调
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        // TODO Auto-generated method stub
+        super.onSizeChanged(w, h, oldw, oldh);
+        Log.e(TAG, "onSizeChanged: "+w);
+        Log.e(TAG, "onSizeChanged: "+h);
+    }
     @Override protected void drawableStateChanged() {
         super.drawableStateChanged();
     }
