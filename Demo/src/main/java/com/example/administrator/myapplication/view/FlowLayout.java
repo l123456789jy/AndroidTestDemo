@@ -28,7 +28,7 @@ public class FlowLayout extends ViewGroup {
 
 
     /**
-     * 测量自己的大小和子容器的大小
+     * 测量自己的大小
      */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
