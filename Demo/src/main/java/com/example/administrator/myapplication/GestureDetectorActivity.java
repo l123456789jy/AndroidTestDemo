@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.example.administrator.myapplication.GestureDetector.Gesturelistener;
+import com.example.administrator.myapplication.gestureDetector.Gesturelistener;
 
 /**
  * GestureDetector通过这个类我们可以识别很多的手势

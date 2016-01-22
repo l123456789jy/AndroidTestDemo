@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication.GestureDetector;
+package com.example.administrator.myapplication.gestureDetector;
 
 import android.content.Context;
 import android.util.Log;
