@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_tv) Button mBtTv;
     @Bind(R.id.bt_view_group) Button mBtViewGroup;
     @Bind(R.id.bt_view_float) Button mBtViewFloat;
+    @Bind(R.id.bt_canvas) Button mBtCanvas;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity
         mBtTv.setOnClickListener(this);
         mBtViewGroup.setOnClickListener(this);
         mBtViewFloat.setOnClickListener(this);
+        mBtCanvas.setOnClickListener(this);
     }
 
 
@@ -121,12 +123,14 @@ public class MainActivity extends AppCompatActivity
                 break;
             //自定义流式布局
             case R.id.bt_view_float:
-                mIntent = new Intent(MainActivity.this,
-                        FlowActivity.class);
+                mIntent = new Intent(MainActivity.this, FlowActivity.class);
                 startActivity(mIntent);
                 break;
-
-
+            //Canvas基本api使用
+            case R.id.bt_canvas:
+                mIntent = new Intent(MainActivity.this, CanvasActivity.class);
+                startActivity(mIntent);
+                break;
         }
     }
 }

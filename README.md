@@ -15,3 +15,4 @@
 - GestureDetector手势类使用
 - webview与js的远程调用
 - 自定义viewgroup实现流式标签
+- Canvas基本api使用

@@ -77,6 +77,10 @@
         <activity
             android:name=".FlowActivity"
             android:label="@string/title_activity_flow"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".CanvasActivity"
+            android:label="@string/title_activity_canvas"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
