@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.example.administrator.myapplication.db.DbActivity;
 
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_view_group) Button mBtViewGroup;
     @Bind(R.id.bt_view_float) Button mBtViewFloat;
     @Bind(R.id.bt_canvas) Button mBtCanvas;
+    @Bind(R.id.bt_db) Button mBtDb;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity
         mBtViewGroup.setOnClickListener(this);
         mBtViewFloat.setOnClickListener(this);
         mBtCanvas.setOnClickListener(this);
+        mBtDb.setOnClickListener(this);
     }
 
 
@@ -129,6 +132,11 @@ public class MainActivity extends AppCompatActivity
             //Canvas基本api使用
             case R.id.bt_canvas:
                 mIntent = new Intent(MainActivity.this, CanvasActivity.class);
+                startActivity(mIntent);
+                break;
+            //db测试
+            case R.id.bt_db:
+                mIntent = new Intent(MainActivity.this, DbActivity.class);
                 startActivity(mIntent);
                 break;
         }

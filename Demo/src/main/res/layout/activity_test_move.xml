@@ -102,6 +102,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Canvas使用"/>
+            <Button
+                android:id="@+id/bt_db"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="greenDao"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

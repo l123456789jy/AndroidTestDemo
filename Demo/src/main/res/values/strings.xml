@@ -32,5 +32,6 @@
     <string name="title_activity_webview">WebviewActivity</string>
     <string name="title_activity_flow">FlowActivity</string>
     <string name="title_activity_canvas">CanvasActivity</string>
+    <string name="title_activity_db">DbActivity</string>
 
 </resources>
