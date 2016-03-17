@@ -4,8 +4,8 @@
 
     <uses-permission android:name="android.permission.CAMERACALL_PHONE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <!-- 访问网络，网络定位需要上网-->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- 往sdcard中写入数据的权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 在sdcard中创建/删除文件的权限 -->
@@ -14,7 +14,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <!-- 相机操作权限 -->
     <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+
     <application
         android:name=".context.ApplicationData"
         android:allowBackup="true"
@@ -87,7 +88,9 @@
         <activity
             android:name=".db.DbActivity"
             android:label="@string/title_activity_db"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".DesignPatternActivity"/>
+        <activity android:name=".circledemo.CirlActivity"></activity>
     </application>
 
 </manifest>

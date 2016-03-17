@@ -19,7 +19,7 @@ public class ViewTestActivity extends Activity {
 
         //建造者模式
         NutritionFacts.Builder builder = new NutritionFacts.Builder(20, 0);
-        builder.fat(50).Builder();
+        builder.fat(50).sodium(20).Builder();
 
 
     }

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custome="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tv_comment_reply_nickname1"
+            android:textSize="20sp"
+            android:textColor="#f6f6f6"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12px"
+            android:layout_toRightOf="@+id/tv_comment_reply_nickname1"
+            android:id="@+id/tv_comment_reply_nickname_hf"
+            android:text="回复"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_red_dark"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12px"
+            android:layout_toRightOf="@+id/tv_comment_reply_nickname_hf"
+            android:id="@+id/tv_comment_reply_nickname2"
+            android:textSize="20sp"
+            android:textColor="#f6f6f6"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_comment_reply_index"
+            android:textSize="20sp"
+            android:textColor="#f6f6f6"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="42px"
+        android:id="@+id/tv_comment_reply_content"
+        android:textSize="36px"
+        android:textColor="#f6f6f6"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30px"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tv_comment_reply_dateline"
+            android:textSize="36px"
+            android:textColor="#f6f6f6"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:id="@+id/btn_comment_reply"
+            android:text="评论"
+            android:textSize="36px"
+            android:textColor="#f6f6f6"
+            android:background="@android:color/transparent"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

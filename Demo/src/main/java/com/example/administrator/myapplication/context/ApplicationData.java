@@ -37,7 +37,7 @@ public class ApplicationData extends Application {
                     @Override
                     public void onDbOpened(DbManager db) {
                         // 开启WAL, 对写入加速提升巨大
-                        db.getDatabase().enableWriteAheadLogging();
+                       // db.getDatabase().enableWriteAheadLogging();
                     }
                 })
                 .setDbUpgradeListener(new DbManager.DbUpgradeListener() {

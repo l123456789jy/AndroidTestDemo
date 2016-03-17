@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.example.administrator.myapplication.circledemo.CirlActivity;
 import com.example.administrator.myapplication.db.DbActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_view_float) Button mBtViewFloat;
     @Bind(R.id.bt_canvas) Button mBtCanvas;
     @Bind(R.id.bt_db) Button mBtDb;
+    @Bind(R.id.bt_des) Button mBtDes;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity
         mBtViewFloat.setOnClickListener(this);
         mBtCanvas.setOnClickListener(this);
         mBtDb.setOnClickListener(this);
+        mBtDes.setOnClickListener(this);
     }
 
 
@@ -137,6 +140,11 @@ public class MainActivity extends AppCompatActivity
             //db测试
             case R.id.bt_db:
                 mIntent = new Intent(MainActivity.this, DbActivity.class);
+                startActivity(mIntent);
+                break;
+            //朋友圈
+            case R.id.bt_des:
+                mIntent = new Intent(MainActivity.this, CirlActivity.class);
                 startActivity(mIntent);
                 break;
         }
