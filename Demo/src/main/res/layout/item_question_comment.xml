@@ -12,8 +12,7 @@
         android:layout_height="99px"
         android:layout_marginLeft="48px"
         android:layout_marginTop="30px"
-        android:layout_marginRight="21px"
-        />
+        android:layout_marginRight="21px"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,140 +20,120 @@
         android:layout_marginRight="48px"
         android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="42px"
-                android:layout_marginBottom="45px">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_comment_nickname"
-                    android:textSize="20dp"
-                    android:textColor="#efefef"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_comment_dateline"
-                    android:layout_marginLeft="24px"
-                    android:textSize="20sp"
-                    android:textColor="#838383"
-                    android:layout_toRightOf="@+id/tv_comment_nickname"
-                    android:layout_alignParentBottom="true"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_comment_index"
-                    android:textSize="20sp"
-                    android:textColor="#838383"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    />
-            </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42px"
+            android:layout_marginBottom="45px">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_comment_content"
-                android:lineSpacingExtra="8px"
-                android:textSize="36px"
+                android:id="@+id/tv_comment_nickname"
+                android:textSize="20dp"
+                android:text="javack"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_comment_dateline"
+                android:layout_marginLeft="24px"
+                android:singleLine="true"
+                android:textSize="20sp"
                 android:textColor="#838383"
-                />
+                android:layout_toRightOf="@+id/tv_comment_nickname"
+                android:layout_alignParentBottom="true"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="42px"
-                android:layout_marginBottom="32px"
-
-                >
-
-
-                    <ImageButton
-                        android:layout_width="80px"
-                        android:layout_height="80px"
-                        android:id="@+id/ib_comment_zan"
-                        android:src="@drawable/question_detail_comment_zan"
-                        android:background="#00000000"
-                        android:layout_toLeftOf="@+id/tv_comment_zan_nums"
-                        />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_comment_zan_nums"
-                        android:layout_marginLeft="12px"
-                        android:layout_marginTop="15px"
-                        android:textSize="20sp"
-                        android:textColor="#838383"
-                        android:layout_toLeftOf="@+id/ib_comment_reply"
-                        />
-
-                    <ImageButton
-                        android:layout_width="80px"
-                        android:layout_height="80px"
-                        android:layout_marginLeft="12px"
-                        android:id="@+id/ib_comment_reply"
-                        android:src="@drawable/question_detail_comment_reply"
-                        android:layout_toLeftOf="@+id/tv_comment_nums"
-                        android:background="#00000000"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_comment_nums"
-                        android:layout_marginLeft="12px"
-                        android:layout_marginTop="15px"
-                        android:textSize="20sp"
-                        android:textColor="#838383"
-                        android:text="评论"
-                        android:layout_alignParentRight="true"
-                        android:clickable="true"
-                        android:background="@android:color/transparent"
-                        />
-
-            </RelativeLayout>
-<!--
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/item_anim_add_one"
+                android:id="@+id/tv_comment_index"
+                android:textSize="20sp"
+                android:textColor="#838383"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_comment_content"
+            android:lineSpacingExtra="8px"
+            android:text="评论的内容"
+            android:textSize="36px"
+            android:textColor="#838383"/>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42px"
+            android:layout_marginBottom="32px"
+
+            >
+
+            <ImageButton
+                android:layout_marginLeft="10dp"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:id="@+id/ib_comment_zan"
+                android:src="@drawable/question_detail_comment_zan"
+                android:background="#00000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_comment_zan_nums"
                 android:layout_marginLeft="12px"
                 android:layout_marginTop="15px"
-                android:textSize="@dimen/text_size_f4"
-                android:textColor="@color/color_c6"
-                android:text="+1"
-                />
--->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@drawable/question_detail_answer_linear_background"
-                        android:layout_marginTop="8px"
-                        android:layout_marginBottom="42px"
-                        android:paddingLeft="27px"
-                        android:paddingRight="27px"
-                        android:paddingTop="45px"
-                        android:paddingBottom="15px"
-                        android:id="@+id/ll_question_comment_reply"
-                        >
+                android:text="10"
+                android:textSize="20sp"
+                android:textColor="#838383"
+                android:layout_toRightOf="@+id/ib_comment_zan"/>
 
-                        <android.support.v7.widget.RecyclerView
-                            android:id="@+id/lv_question_comment_reply"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:dividerHeight="1sp"
-                            />
+            <ImageButton
+                android:layout_toRightOf="@+id/tv_comment_zan_nums"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:id="@+id/ib_comment_reply"
+                android:src="@drawable/question_detail_comment_reply"
+                android:background="#00000000"/>
 
-           </LinearLayout>
+            <TextView
+                android:layout_toRightOf="@+id/ib_comment_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_comment_nums"
+                android:layout_marginLeft="12px"
+                android:layout_marginTop="15px"
+                android:textSize="20sp"
+                android:textColor="#838383"
+                android:text="5"
+                android:clickable="true"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/question_detail_answer_linear_background"
+            android:layout_marginTop="8px"
+            android:layout_marginBottom="42px"
+            android:paddingLeft="27px"
+            android:paddingRight="27px"
+            android:paddingTop="45px"
+            android:paddingBottom="15px"
+            android:id="@+id/ll_question_comment_replys">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lv_question_comment_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="1sp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -12,9 +12,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+            android:text="www威威威威"
             android:id="@+id/tv_comment_reply_nickname1"
             android:textSize="20sp"
-            android:textColor="#f6f6f6"
+            android:textColor="@android:color/black"
             />
 
         <TextView
@@ -24,38 +25,43 @@
             android:layout_toRightOf="@+id/tv_comment_reply_nickname1"
             android:id="@+id/tv_comment_reply_nickname_hf"
             android:text="回复"
-            android:textSize="30sp"
+            android:textSize="10sp"
             android:textColor="@android:color/holo_red_dark"
             />
 
         <TextView
+            android:singleLine="true"
+            android:maxLength="10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12px"
+            android:text="hahaha"
             android:layout_toRightOf="@+id/tv_comment_reply_nickname_hf"
             android:id="@+id/tv_comment_reply_nickname2"
             android:textSize="20sp"
-            android:textColor="#f6f6f6"
+            android:textColor="@android:color/black"
             />
 
         <TextView
+            android:textColor="@android:color/black"
+            android:text="1楼"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:id="@+id/tv_comment_reply_index"
             android:textSize="20sp"
-            android:textColor="#f6f6f6"
             />
     </RelativeLayout>
 
     <TextView
+        android:text="牛逼啊"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30px"
         android:layout_marginBottom="42px"
         android:id="@+id/tv_comment_reply_content"
         android:textSize="36px"
-        android:textColor="#f6f6f6"
+        android:textColor="@android:color/black"
         />
 
     <RelativeLayout
@@ -68,9 +74,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+            android:text="2016-2-23"
             android:id="@+id/tv_comment_reply_dateline"
             android:textSize="36px"
-            android:textColor="#f6f6f6"
+            android:textColor="@android:color/black"
             />
 
         <Button
@@ -83,7 +90,7 @@
             android:text="评论"
             android:textSize="36px"
             android:textColor="#f6f6f6"
-            android:background="@android:color/transparent"
+            android:background="@android:color/black"
             />
     </RelativeLayout>
 

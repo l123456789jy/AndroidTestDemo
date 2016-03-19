@@ -17,11 +17,11 @@ public class CirlBean {
      * total : 34
      */
 
-    public int code;
-    public int errorType;
-    public int isLast;
-    public String realTotal;
-    public String total;
+    private int code;
+    private int errorType;
+    private int isLast;
+    private String realTotal;
+    private String total;
     /**
      * author : {"avatar":"http://www.kgc.dev.cn/avatar?uid=7673882&size=small","nickname":"javain","uid":"7673882"}
      * child : [{"author":{"avatar":"http://www.kgc.dev.cn/avatar?uid=7673882&size=small","nickname":"javain","uid":"7673882"},"content":"www","dateline":"2016-03-17 09:44:26","id":"1215","isZan":0,"rName":"javain","rid":"1214","zan":"0"},{"author":{"avatar":"http://www.kgc.dev.cn/avatar?uid=7673889&size=small","nickname":"行几乎有热水","uid":"7673889"},"content":"kskd","dateline":"2016-03-17 10:48:29","id":"1262","isZan":0,"rName":"javain","rid":"1214","zan":"0"},{"author":{"avatar":"http://www.kgc.dev.cn/avatar?uid=7673889&size=small","nickname":"行几乎有热水","uid":"7673889"},"content":"kddkdk","dateline":"2016-03-17 10:48:36","id":"1263","isZan":0,"rName":"行几乎有热水","rid":"1262","zan":"0"},{"author":{"avatar":"http://www.kgc.dev.cn/avatar?uid=7673114&size=small","nickname":"哦去啦说快是","uid":"7673114"},"content":"哦摸摸魔金holy奖励你破公民体力进攻我给您体力精明哦婆婆家里你先人做撒子样子了1接近破婆婆上YY婆婆肉hill去加工明宫你摸过提理解普通婆婆婆婆子JSP咯理亏紧迫婆婆傻X破积极体检金嗓子李敏开题诺咯哈走了亏你家伙set你信破功里咯哈我是我婆婆婆媳哦lol库珀婆婆外婆楼木木木诺诺莫咯虎姑婆肉末木木木木木木XP磨破巨亏明son死来PK绥滨奶精诺红米弄出来聚聚斜坡去给你贴心磕头他外婆给哦哦热粥多咯咯咙","dateline":"2016-03-17 11:06:53","id":"1274","isZan":0,"rName":"javain","rid":"1214","zan":"0"},{"author":{"avatar":"http://www.kgc.dev.cn/avatar?uid=7673830&size=small","nickname":"测试222","uid":"7673830"},"content":"vhh","dateline":"2016-03-17 18:07:45","id":"1395","isZan":0,"rName":"javain","rid":"1214","zan":"0"}]
@@ -34,7 +34,46 @@ public class CirlBean {
      * zan : 5
      */
 
-    public List<CommentsEntity> comments;
+    private List<CommentsEntity> comments;
+
+
+    public int getCode() { return code;}
+
+
+    public void setCode(int code) { this.code = code;}
+
+
+    public int getErrorType() { return errorType;}
+
+
+    public void setErrorType(int errorType) { this.errorType = errorType;}
+
+
+    public int getIsLast() { return isLast;}
+
+
+    public void setIsLast(int isLast) { this.isLast = isLast;}
+
+
+    public String getRealTotal() { return realTotal;}
+
+
+    public void setRealTotal(String realTotal) { this.realTotal = realTotal;}
+
+
+    public String getTotal() { return total;}
+
+
+    public void setTotal(String total) { this.total = total;}
+
+
+    public List<CommentsEntity> getComments() { return comments;}
+
+
+    public void setComments(List<CommentsEntity> comments) {
+        this.comments = comments;
+    }
+
 
     public static class CommentsEntity {
         /**
@@ -43,14 +82,14 @@ public class CirlBean {
          * uid : 7673882
          */
 
-        public AuthorEntity author;
-        public String content;
-        public String dateline;
-        public int floor;
-        public String id;
-        public int isZan;
-        public String rid;
-        public String zan;
+        private AuthorEntity author;
+        private String content;
+        private String dateline;
+        private int floor;
+        private String id;
+        private int isZan;
+        private String rid;
+        private String zan;
         /**
          * author : {"avatar":"http://www.kgc.dev.cn/avatar?uid=7673882&size=small","nickname":"javain","uid":"7673882"}
          * content : www
@@ -62,12 +101,87 @@ public class CirlBean {
          * zan : 0
          */
 
-        public List<ChildEntity> child;
+        private List<ChildEntity> child;
+
+
+        public AuthorEntity getAuthor() { return author;}
+
+
+        public void setAuthor(AuthorEntity author) { this.author = author;}
+
+
+        public String getContent() { return content;}
+
+
+        public void setContent(String content) { this.content = content;}
+
+
+        public String getDateline() { return dateline;}
+
+
+        public void setDateline(String dateline) { this.dateline = dateline;}
+
+
+        public int getFloor() { return floor;}
+
+
+        public void setFloor(int floor) { this.floor = floor;}
+
+
+        public String getId() { return id;}
+
+
+        public void setId(String id) { this.id = id;}
+
+
+        public int getIsZan() { return isZan;}
+
+
+        public void setIsZan(int isZan) { this.isZan = isZan;}
+
+
+        public String getRid() { return rid;}
+
+
+        public void setRid(String rid) { this.rid = rid;}
+
+
+        public String getZan() { return zan;}
+
+
+        public void setZan(String zan) { this.zan = zan;}
+
+
+        public List<ChildEntity> getChild() { return child;}
+
+
+        public void setChild(List<ChildEntity> child) { this.child = child;}
+
 
         public static class AuthorEntity {
-            public String avatar;
-            public String nickname;
-            public String uid;
+            private String avatar;
+            private String nickname;
+            private String uid;
+
+
+            public String getAvatar() { return avatar;}
+
+
+            public void setAvatar(String avatar) { this.avatar = avatar;}
+
+
+            public String getNickname() { return nickname;}
+
+
+            public void setNickname(String nickname) {
+                this.nickname = nickname;
+            }
+
+
+            public String getUid() { return uid;}
+
+
+            public void setUid(String uid) { this.uid = uid;}
         }
 
         public static class ChildEntity {
@@ -77,19 +191,90 @@ public class CirlBean {
              * uid : 7673882
              */
 
-            public AuthorEntity author;
-            public String content;
-            public String dateline;
-            public String id;
-            public int isZan;
-            public String rName;
-            public String rid;
-            public String zan;
+            private AuthorEntity author;
+            private String content;
+            private String dateline;
+            private String id;
+            private int isZan;
+            private String rName;
+            private String rid;
+            private String zan;
+
+
+            public AuthorEntity getAuthor() { return author;}
+
+
+            public void setAuthor(AuthorEntity author) { this.author = author;}
+
+
+            public String getContent() { return content;}
+
+
+            public void setContent(String content) { this.content = content;}
+
+
+            public String getDateline() { return dateline;}
+
+
+            public void setDateline(String dateline) {
+                this.dateline = dateline;
+            }
+
+
+            public String getId() { return id;}
+
+
+            public void setId(String id) { this.id = id;}
+
+
+            public int getIsZan() { return isZan;}
+
+
+            public void setIsZan(int isZan) { this.isZan = isZan;}
+
+
+            public String getRName() { return rName;}
+
+
+            public void setRName(String rName) { this.rName = rName;}
+
+
+            public String getRid() { return rid;}
+
+
+            public void setRid(String rid) { this.rid = rid;}
+
+
+            public String getZan() { return zan;}
+
+
+            public void setZan(String zan) { this.zan = zan;}
+
 
             public static class AuthorEntity {
-                public String avatar;
-                public String nickname;
-                public String uid;
+                private String avatar;
+                private String nickname;
+                private String uid;
+
+
+                public String getAvatar() { return avatar;}
+
+
+                public void setAvatar(String avatar) { this.avatar = avatar;}
+
+
+                public String getNickname() { return nickname;}
+
+
+                public void setNickname(String nickname) {
+                    this.nickname = nickname;
+                }
+
+
+                public String getUid() { return uid;}
+
+
+                public void setUid(String uid) { this.uid = uid;}
             }
         }
     }
