@@ -90,7 +90,8 @@
             android:label="@string/title_activity_db"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".DesignPatternActivity"/>
-        <activity android:name=".circledemo.CirlActivity"></activity>
+        <activity android:name=".circledemo.CirlActivity"/>
+        <activity android:name=".RetrofitActivity"></activity>
     </application>
 
 </manifest>

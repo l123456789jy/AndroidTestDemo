@@ -112,6 +112,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="朋友圈"/>
+            <Button
+                android:id="@+id/bt_re"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="retrofit使用"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

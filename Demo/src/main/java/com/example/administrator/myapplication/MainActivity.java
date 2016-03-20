@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_canvas) Button mBtCanvas;
     @Bind(R.id.bt_db) Button mBtDb;
     @Bind(R.id.bt_des) Button mBtDes;
+    @Bind(R.id.bt_re) Button mBtRe;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity
         mBtCanvas.setOnClickListener(this);
         mBtDb.setOnClickListener(this);
         mBtDes.setOnClickListener(this);
+        mBtRe.setOnClickListener(this);
     }
 
 
@@ -145,6 +147,11 @@ public class MainActivity extends AppCompatActivity
             //朋友圈
             case R.id.bt_des:
                 mIntent = new Intent(MainActivity.this, CirlActivity.class);
+                startActivity(mIntent);
+                break;
+            //retrofit使用
+            case R.id.bt_re:
+                mIntent = new Intent(MainActivity.this, RetrofitActivity.class);
                 startActivity(mIntent);
                 break;
         }
