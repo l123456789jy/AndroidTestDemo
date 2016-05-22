@@ -11,6 +11,7 @@ import retrofit2.http.Path;
 public interface IGanKService {
     //这种请求方式适用于
   //  http://gank.io/api/data/Android/10/1
-    @GET("data/Android/{id}/{postion}") Call<GankAntry> getGankData(
+    @GET("data/Android/{id}/{postion}")
+    Call<GankAntry> getGankData(
             @Path("id") int groupId, @Path("postion") int index);
 }

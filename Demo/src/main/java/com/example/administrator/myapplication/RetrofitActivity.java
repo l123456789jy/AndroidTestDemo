@@ -74,13 +74,14 @@ public class RetrofitActivity extends AppCompatActivity {
     private void getGankData2() {
         //还可以配置okhttpclient
         //这种请求是这样的形式  https://api.douban.com/v2/movie/top250?start=0&count=10
+
+
+        //http://api.bdqn.cn/services/youke?mechanism=kgc&method=login&osType=android&osVersion=3.8&passport=15022010530&password=e10adc3949ba59abbe56e057f20f883e&auth=dfc87567a6af67b9cc7543bc39322c61
         String baseUrl = "https://api.douban.com/v2/movie/";
         Retrofit retrofit = new Retrofit.Builder().baseUrl(baseUrl)
                                                   .addConverterFactory(
                                                           GsonConverterFactory.create())
                                                   .build();
-        IGanKService ganKService = retrofit.create(IGanKService.class);
-        Call<GankAntry> gankData = ganKService.getGankData(10, 1);
         IMoveService movieService = retrofit.create(IMoveService.class);
         Call<MovieEntity> call = movieService.getTopMovie(0, 10);
         call.enqueue(new Callback<MovieEntity>() {

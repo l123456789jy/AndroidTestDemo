@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
-import butterknife.Bind;
-import butterknife.ButterKnife;
+
 import com.example.administrator.myapplication.circledemo.CirlActivity;
 import com.example.administrator.myapplication.db.DbActivity;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_db) Button mBtDb;
     @Bind(R.id.bt_des) Button mBtDes;
     @Bind(R.id.bt_re) Button mBtRe;
+    @Bind(R.id.bt_post) Button mBtPost;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity
         mBtDb.setOnClickListener(this);
         mBtDes.setOnClickListener(this);
         mBtRe.setOnClickListener(this);
+        mBtPost.setOnClickListener(this);
     }
 
 
@@ -154,6 +158,13 @@ public class MainActivity extends AppCompatActivity
                 mIntent = new Intent(MainActivity.this, RetrofitActivity.class);
                 startActivity(mIntent);
                 break;
+            //社区
+            case R.id.bt_post:
+                mIntent = new Intent(MainActivity.this, RxJavaActivity.class);
+                startActivity(mIntent);
+                break;
+
+
         }
     }
 }
