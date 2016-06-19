@@ -19,3 +19,4 @@
 - greendao
 - 简单模仿盖楼
 - retrofit使用
+- Rxjava操作符
