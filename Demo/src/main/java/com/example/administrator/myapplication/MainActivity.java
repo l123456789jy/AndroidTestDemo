@@ -6,15 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
-
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import com.example.administrator.myapplication.circledemo.CirlActivity;
 import com.example.administrator.myapplication.db.DbActivity;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 public class MainActivity extends AppCompatActivity
-        implements View.OnClickListener {
+    implements View.OnClickListener {
     @Bind(R.id.toolbar) Toolbar mToolbar;
     @Bind(R.id.bt) Button mBt;
     Intent mIntent;
@@ -35,6 +33,8 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_des) Button mBtDes;
     @Bind(R.id.bt_re) Button mBtRe;
     @Bind(R.id.bt_post) Button mBtPost;
+    @Bind(R.id.bt_gen) Button bt_gen;
+
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity
         mBtDes.setOnClickListener(this);
         mBtRe.setOnClickListener(this);
         mBtPost.setOnClickListener(this);
+        bt_gen.setOnClickListener(this);
+
     }
 
 
@@ -74,13 +76,13 @@ public class MainActivity extends AppCompatActivity
             //打开View事件测试界面
             case R.id.bt_event:
                 mIntent = new Intent(MainActivity.this,
-                        TestEventActivity.class);
+                    TestEventActivity.class);
                 startActivity(mIntent);
                 break;
             //测试线程池
             case R.id.bt_thread:
                 mIntent = new Intent(MainActivity.this,
-                        ThreadPollTestActivity.class);
+                    ThreadPollTestActivity.class);
                 startActivity(mIntent);
                 break;
             //自定义view
@@ -96,19 +98,19 @@ public class MainActivity extends AppCompatActivity
             //ViewDragHelper使用
             case R.id.bt_viewdrag_help:
                 mIntent = new Intent(MainActivity.this,
-                        ViewDragHelperActivity.class);
+                    ViewDragHelperActivity.class);
                 startActivity(mIntent);
                 break;
             //动画的使用
             case R.id.bt_animation:
                 mIntent = new Intent(MainActivity.this,
-                        AnimationActivity.class);
+                    AnimationActivity.class);
                 startActivity(mIntent);
                 break;
             //handelthread
             case R.id.bt_handel:
                 mIntent = new Intent(MainActivity.this,
-                        HandelThreadActivity.class);
+                    HandelThreadActivity.class);
                 startActivity(mIntent);
                 break;
             //观察者模式
@@ -119,7 +121,7 @@ public class MainActivity extends AppCompatActivity
             //GestureDetector手势类探索
             case R.id.bt_gesture:
                 mIntent = new Intent(MainActivity.this,
-                        GestureDetectorActivity.class);
+                    GestureDetectorActivity.class);
                 startActivity(mIntent);
                 break;
             //webview
@@ -130,7 +132,7 @@ public class MainActivity extends AppCompatActivity
             //自定义viewgroup
             case R.id.bt_view_group:
                 mIntent = new Intent(MainActivity.this,
-                        ViewGroupActivity.class);
+                    ViewGroupActivity.class);
                 startActivity(mIntent);
                 break;
             //自定义流式布局
@@ -158,9 +160,14 @@ public class MainActivity extends AppCompatActivity
                 mIntent = new Intent(MainActivity.this, RetrofitActivity.class);
                 startActivity(mIntent);
                 break;
-            //社区
+            //Rx
             case R.id.bt_post:
                 mIntent = new Intent(MainActivity.this, RxJavaActivity.class);
+                startActivity(mIntent);
+                break;
+            //泛型使用场景
+            case R.id.bt_gen:
+                mIntent = new Intent(MainActivity.this, GenericityActivity.class);
                 startActivity(mIntent);
                 break;
 

@@ -12,9 +12,9 @@
         app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
     <ScrollView
-        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,36 +92,48 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="自定义viewgroup"/>
+
             <Button
                 android:id="@+id/bt_view_float"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="自定义流式布局"/>
+
             <Button
                 android:id="@+id/bt_canvas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Canvas使用"/>
+
             <Button
                 android:id="@+id/bt_db"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="greenDao"/>
+
             <Button
                 android:id="@+id/bt_des"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="朋友圈"/>
+
             <Button
                 android:id="@+id/bt_re"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="retrofit使用"/>
+
             <Button
                 android:id="@+id/bt_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="RxJavaActivity"/>
+
+            <Button
+                android:id="@+id/bt_gen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="泛型使用场景"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

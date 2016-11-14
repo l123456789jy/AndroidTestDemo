@@ -2,19 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.myapplication">
 
-    <uses-permission android:name="android.permission.CAMERACALL_PHONE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERACALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 访问网络，网络定位需要上网 -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- 往sdcard中写入数据的权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 在sdcard中创建/删除文件的权限 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <!-- 在SDCard中读取数据的权限 -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <!-- 相机操作权限 -->
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
 
     <application
         android:name=".context.ApplicationData"
@@ -28,72 +28,73 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".TestMoveActivity"
             android:label="@string/title_activity_test_move"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".TestEventActivity"
             android:label="@string/title_activity_test_event"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ThreadPollTestActivity"
             android:label="@string/title_activity_thread_poll_test"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ViewTestActivity"
-            android:label="@string/title_activity_view_test" />
+            android:label="@string/title_activity_view_test"/>
         <activity
             android:name=".RefreshActivity"
             android:label="@string/title_activity_refresh"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ViewDragHelperActivity"
             android:label="@string/title_activity_view_drag_helper"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".AnimationActivity"
             android:label="@string/title_activity_animation"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".HandelThreadActivity"
             android:label="@string/title_activity_handel_thread"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ObseverActivity"
             android:label="@string/title_activity_obsever"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".GestureDetectorActivity"
             android:label="@string/title_activity_gesture_detector"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ViewGroupActivity"
             android:label="@string/title_activity_view_group"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".WebviewActivity" />
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".WebviewActivity"/>
         <activity
             android:name=".FlowActivity"
             android:label="@string/title_activity_flow"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".CanvasActivity"
             android:label="@string/title_activity_canvas"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".db.DbActivity"
             android:label="@string/title_activity_db"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DesignPatternActivity" />
-        <activity android:name=".circledemo.CirlActivity" />
-        <activity android:name=".RetrofitActivity" />
-        <activity android:name=".PostActivity" />
-        <activity android:name=".RxJavaActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".DesignPatternActivity"/>
+        <activity android:name=".circledemo.CirlActivity"/>
+        <activity android:name=".RetrofitActivity"/>
+        <activity android:name=".PostActivity"/>
+        <activity android:name=".RxJavaActivity"/>
+        <activity android:name=".GenericityActivity"></activity>
     </application>
 
 </manifest>
