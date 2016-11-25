@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'android-apt'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -36,4 +36,6 @@ dependencies {
     compile 'com.android.support:support-v4:23.2.1'
     compile 'io.reactivex:rxandroid:1.2.0'
     compile 'io.reactivex:rxjava:1.1.5'
+    compile 'com.github.mzule.activityrouter:activityrouter:1.2.1'
+    apt 'com.github.mzule.activityrouter:compiler:1.1.7'
 }

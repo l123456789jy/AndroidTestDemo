@@ -134,6 +134,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="泛型使用场景"/>
+            <Button
+                android:id="@+id/bt_router"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="路由打开界面"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

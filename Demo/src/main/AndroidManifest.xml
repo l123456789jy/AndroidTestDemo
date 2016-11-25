@@ -96,18 +96,29 @@
         <activity android:name=".RxJavaActivity"/>
         <activity android:name=".GenericityActivity"/>
         <activity android:name=".RouteTestActivity">
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <!--下面所设置的质需要和html端对调-->
-                <!--在data里设置了 scheme和host，则该Activity可以接收和处理类似于 "sharetest://data/XXX"的链接-->
+                &lt;!&ndash;下面所设置的质需要和html端对调&ndash;&gt;
+                &lt;!&ndash;在data里设置了 scheme和host，则该Activity可以接收和处理类似于 "sharetest://data/XXX"的链接&ndash;&gt;
                 <data
                     android:host="haha"
                     android:pathPrefix="/open"
                     android:scheme="testapp" />
-            </intent-filter>
+            </intent-filter>-->
 
+        </activity>
+
+        <activity
+            android:name="com.github.mzule.activityrouter.router.RouterActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="testapp" /><!--改成自己的scheme-->
+            </intent-filter>
         </activity>
     </application>
 

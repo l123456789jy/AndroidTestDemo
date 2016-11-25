@@ -10,6 +10,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.example.administrator.myapplication.circledemo.CirlActivity;
 import com.example.administrator.myapplication.db.DbActivity;
+import com.github.mzule.activityrouter.router.Routers;
 
 public class MainActivity extends AppCompatActivity
     implements View.OnClickListener {
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.bt_re) Button mBtRe;
     @Bind(R.id.bt_post) Button mBtPost;
     @Bind(R.id.bt_gen) Button bt_gen;
-
+    @Bind(R.id.bt_router) Button bt_router;
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity
         mBtRe.setOnClickListener(this);
         mBtPost.setOnClickListener(this);
         bt_gen.setOnClickListener(this);
-
+        bt_router.setOnClickListener(this);
     }
 
 
@@ -170,7 +171,10 @@ public class MainActivity extends AppCompatActivity
                 mIntent = new Intent(MainActivity.this, GenericityActivity.class);
                 startActivity(mIntent);
                 break;
-
+            //路由跳转到  RouteTestActivity
+            case R.id.bt_router:
+                Routers.open(this, "testapp://main?name=lisi&age=30&from=ucbroswer");
+                break;
 
         }
     }
