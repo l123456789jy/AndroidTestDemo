@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <item name="id_stickynavlayout_topview"
+    type="id"/>
+  <item name="id_stickynavlayout_viewpager"
+    type="id"/>
+  <item name="id_stickynavlayout_indicator"
+    type="id"/>
+  <item name="id_stickynavlayout_innerscrollview"
+    type="id"/>
+  <item name="action_search"
+    type="id"/>
+  <item name="action_notification"
+    type="id"/>
+  <item name="action_settings"
+    type="id"/>
+  <item name="action_about"
+    type="id"/>
+  <item name="normal"
+    type="id"/>
+  <item name="clear"
+    type="id"/>
+  <item name="linear"
+    type="id"/>
+  <item name="grid"
+    type="id"/>
+  <item name="staggered"
+    type="id"/>
+  <item name="partial"
+    type="id"
+   />
+</resources>

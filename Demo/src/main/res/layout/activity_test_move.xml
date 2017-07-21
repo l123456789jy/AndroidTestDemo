@@ -1,144 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+      <Button
+        android:id="@+id/bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="view的移动"/>
 
-            <Button
-                android:id="@+id/bt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="view的移动"/>
+      <Button
+        android:id="@+id/bt_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="view事件传递"/>
 
-            <Button
-                android:id="@+id/bt_event"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="view事件传递"/>
+      <Button
+        android:id="@+id/bt_thread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="线程池"/>
 
-            <Button
-                android:id="@+id/bt_thread"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="线程池"/>
+      <Button
+        android:id="@+id/bt_test_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义view"/>
 
-            <Button
-                android:id="@+id/bt_test_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="自定义view"/>
+      <Button
+        android:id="@+id/bt_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义下拉刷新上拉加载listview"/>
 
-            <Button
-                android:id="@+id/bt_refresh"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="自定义下拉刷新上拉加载listview"/>
+      <Button
+        android:id="@+id/bt_viewdrag_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ViewDragHelper"/>
 
-            <Button
-                android:id="@+id/bt_viewdrag_help"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ViewDragHelper"/>
+      <Button
+        android:id="@+id/bt_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="动画"/>
 
-            <Button
-                android:id="@+id/bt_animation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="动画"/>
+      <Button
+        android:id="@+id/bt_handel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HandelThread"/>
 
-            <Button
-                android:id="@+id/bt_handel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HandelThread"/>
+      <Button
+        android:id="@+id/bt_obse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="观察者模式"/>
 
-            <Button
-                android:id="@+id/bt_obse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="观察者模式"/>
+      <Button
+        android:id="@+id/bt_gesture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GestureDetector"/>
 
-            <Button
-                android:id="@+id/bt_gesture"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="GestureDetector"/>
+      <Button
+        android:id="@+id/bt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="webview与js交互"/>
 
-            <Button
-                android:id="@+id/bt_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="webview与js交互"/>
+      <Button
+        android:id="@+id/bt_view_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义viewgroup"/>
 
-            <Button
-                android:id="@+id/bt_view_group"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="自定义viewgroup"/>
+      <Button
+        android:id="@+id/bt_view_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义流式布局"/>
 
-            <Button
-                android:id="@+id/bt_view_float"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="自定义流式布局"/>
+      <Button
+        android:id="@+id/bt_canvas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canvas使用"/>
 
-            <Button
-                android:id="@+id/bt_canvas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Canvas使用"/>
+      <Button
+        android:id="@+id/bt_db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="greenDao"/>
 
-            <Button
-                android:id="@+id/bt_db"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="greenDao"/>
+      <Button
+        android:id="@+id/bt_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="朋友圈"/>
 
-            <Button
-                android:id="@+id/bt_des"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="朋友圈"/>
+      <Button
+        android:id="@+id/bt_re"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="retrofit使用"/>
 
-            <Button
-                android:id="@+id/bt_re"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="retrofit使用"/>
+      <Button
+        android:id="@+id/bt_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RxJavaActivity"/>
 
-            <Button
-                android:id="@+id/bt_post"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="RxJavaActivity"/>
-
-            <Button
-                android:id="@+id/bt_gen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="泛型使用场景"/>
-            <Button
-                android:id="@+id/bt_router"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="路由打开界面"/>
-        </LinearLayout>
-    </ScrollView>
+      <Button
+        android:id="@+id/bt_gen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="泛型使用场景"/>
+      <Button
+        android:id="@+id/bt_router"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="路由打开界面"/>
+      <Button
+        android:id="@+id/bt_toobal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="toobal视差效果"/>
+    </LinearLayout>
+  </ScrollView>
 </RelativeLayout>
